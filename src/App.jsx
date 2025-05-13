@@ -15,7 +15,7 @@ export default function App() {
       <Testimonials />
       <ContactForm />
       <ChatWidget />
-      <ThemeToggle /> {/* Dark Mode toggle button */}
+      <ThemeToggle />
     </div>
   );
 }

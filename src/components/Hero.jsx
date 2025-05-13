@@ -11,7 +11,6 @@ const Hero = () => {
                  bg-gradient-to-br from-blue-100 to-white dark:from-gray-800 dark:to-gray-900 
                  text-gray-900 dark:text-white"
     >
-      {/* ✅ Logo Display */}
       <img src={logo} alt="SoftSell Logo" className="h-16 mb-6 drop-shadow-md" />
 
       <h1 className="text-4xl md:text-5xl font-bold mb-4">

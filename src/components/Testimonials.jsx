@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 
-// Dummy testimonials data
 const testimonials = [
   {
     name: "Sarah Johnson",
