@@ -1,21 +1,31 @@
-import Hero from "./components/Hero";
-import HowItWorks from "./components/HowItWorks";
-import WhyChooseUs from "./components/WhyChooseUs";
-import Testimonials from "./components/Testimonials";
-import ContactForm from "./components/ContactForm";
-import ChatWidget from "./components/ChatWidget";
-import ThemeToggle from './components/ThemeToggle';
+import React from 'react';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import Features from './components/Features';
+import Testimonials from './components/Testimonials';
+import Newsletter from './components/Newsletter';
+import Footer from './components/Footer';
+import { useTheme } from './context/ThemeContext';
+import ChatWidget from './components/ChatWidget';
 
-export default function App() {
+function App() {
+  const { theme } = useTheme();
+  
   return (
-    <div className="bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
-      <Hero />
-      <HowItWorks />
-      <WhyChooseUs />
-      <Testimonials />
-      <ContactForm />
-      <ChatWidget />
-      <ThemeToggle />
+    <div className={`min-h-screen ${theme === 'dark' ? 'dark' : ''}`}>
+      <div className="bg-white dark:bg-gray-900 transition-colors duration-300">
+        <Header />
+        <main>
+          <Hero />
+          <Features />
+          <Testimonials />
+          <Newsletter />
+        </main>
+        <ChatWidget/>
+        <Footer />
+      </div>
     </div>
   );
 }
+
+export default App;

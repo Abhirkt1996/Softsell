@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import logo from "../assets/logo.png"; // ✅ Import logo image
-
+import logo from "../assets/logo.png"; 
 const Hero = () => {
   return (
     <motion.section
